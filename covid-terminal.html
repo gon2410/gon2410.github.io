@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <script type="text/javascript" src="js/config.js"></script>
-    <script type="text/javascript" src="js/covid.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Solway&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/project_style.css">
-    
+    <script type="text/javascript" src="js/functions.js"></script>
 
 
 
@@ -17,107 +15,6 @@
 
         <title>GO | Projects</title>
 
-        <style>
-
-            body {
-                background-color: #000;
-            }
-
-            #main {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                background-color: #000;
-            }
-
-            .dropdown {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                width: 100%;
-                margin-bottom: 50px;    
-            }
-
-            .dropbtn {
-                background-color: #3498DB;
-                color: white;
-                padding: 10px;
-                padding-left: 100px;
-                padding-right: 100px;
-                font-size: 15px;
-                border: none;
-                border-radius: 10px;
-                cursor: pointer;
-            }
-
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #3498DB;
-                color: #000;
-                min-width: inherit;
-                padding-left: 100px;
-                padding-right: 100px;
-                z-index: 1;
-                border-radius: 10px;
-                text-align: center;
-            }
-
-            .dropdown-content button {
-                font-size: 20px;
-                background-color: #3498DB;
-                display: block;
-                border: none;
-                cursor: pointer;
-            }
-
-            .dropdown-content button:hover {
-                color: white;
-            }
-
-
-            .table {
-                font-size: 17px;
-                width: 60%;
-                table-layout: fixed;
-                /*border-collapse: collapse;*/
-                overflow-x: auto;
-                border: 2px solid #c3e0e5;
-                background-color: #333333;
-                margin-bottom: 50px;
-                border-radius: 10px;
-            }
-
-            .table tbody {
-                display: block;
-                width: 100%;
-                overflow: auto;
-                height: 500px;
-            }
-
-            .table thead tr {
-                display: block;
-            }
-
-            .table thead {
-                background-color: black;
-                color: white;
-            }
-
-            .table th, .table td {
-                padding: 10px;
-                text-align: center;
-                width: 200px;  
-            }
-
-            .table td {
-                color: #c3e0e5;
-                border-bottom: 1px solid #000000;
-            }
-
-        </style>
-
     </head>
 
     <body>
@@ -128,26 +25,19 @@
                 </div>
 
                 <div id="main">
-                    <div class="dropdown">
-                        <button onclick=showButtons() class="dropbtn" id='btn'>World</button>
-                        <div id="myDropdown" class="dropdown-content"></div>
-                    </div> 
+                    <h3>Covid</h3>
 
-                    <div class="table">
-                        <table id="main_table">
-                            <thead>
-                                <tr>
-                                    <th>Pos</th>
-                                    <th>Country</th>
-                                    <th style="color:#ffea00;">Infected</th>
-                                    <th style="color:#76ff03;" >Recoveries</th>
-                                    <th style="color:#ff1744;">Deaths</th>
-                                    <th>Population</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tbody"></tbody>
-                        </table>
+                    <div class="image">
+                        <div class="desc">
+                            <p>Builded it with electron framework.</p>
+                            <a onclick=covid_source()><button>Source Code</button></a>
+                        </div>
+                        <video width="640" height="480" controls>
+                            <source src="images/covid/covid.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video> 
                     </div>
+
                 </div>
 
             </div>
