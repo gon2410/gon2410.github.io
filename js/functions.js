@@ -26,6 +26,14 @@ function todo_source(){
   )
 }
 
+function covid_source() {
+  window.open(
+    "https://github.com/gon2410/covid-electron",
+    "_blank"
+  )
+}
+
+
 $(document).ready(function(){
     $("a").on('click', function(event) {
   
