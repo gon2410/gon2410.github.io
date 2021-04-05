@@ -1,37 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Solway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/startpage_style.css">
 
-  <head>
+
+    <head>
 
         <meta charset="UTF-8">
-        <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title>Startpage</title>
 
+        <script>
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('time').innerHTML =
+                h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+
+        </script>
+
     </head>
 
-    <body>
+    <body onload="startTime()">
         <div id="page-container">
             <div id="content-wrap">
-
-                <div id="topbar">
-                    <a style="text-decoration: none;" href="/home/"><h2>Gonzalo Olivera</h2></a>
+                <div id="time">
+                    
                 </div>
-
                 <div id="main">
 
-                </div>
+                    
 
-                <div id="footer">
-                    <p style="padding-top: 10px;">Gonzalo Olivera &#169 2021</p>
-                
-                    <div id="country">
-                        <p style="padding-left: 5px;">Argentina</p>
+                    <div class="column" style="margin-right: 100px;">
+                        <a href="https://www.reddit.com">
+                            <button><img src="images/startpage/reddit.png" alt=""></button>
+                        </a>
+
+                        <a href="https://www.youtube.com">
+                            <button><img src="images/startpage/youtube.png" alt=""></button>
+                        </a>
+
+                        <a href="https://www.github.com">
+                            <button><img src="images/startpage/github.png" alt=""></button>
+                        </a>
+
+                        <a href="https://www.codewars.com">
+                            <button><img src="images/startpage/codewars.png" alt=""></button>
+                        </a>
+
+
+                    </div>
+
+                    <div class="column">
+                        <a href="https://www.outlook.com">
+                            <button><img src="images/startpage/outlook.png" alt=""></button>
+                        </a>
+
+                        <a href="https://www.linkedin.com">
+                            <button><img src="images/startpage/linked.png" alt=""></button>
+                        </a>
+
+                        <a href="https://www.stackoverflow.com">
+                            <button><img src="images/startpage/stack.png" alt=""></button>
+                        </a>
+
+                        <a href="https://www.goodreads.com">
+                            <button><img src="images/startpage/goodreads.png" alt=""></button>
+                        </a>
                     </div>
                 </div>
+
             </div>
+
+            <div id="footer">
+                <!--
+                <p style="padding-top: 10px;">Gonzalo Olivera &#169 2021</p>
+                
+                <div id="country">
+                    <img src="images/icons/arg.png" alt="">
+                    <p style="padding-left: 5px;">Argentina</p>
+                </div>
+                -->
+            </div>
+
         </div>
     </body>
 </html>
